@@ -172,7 +172,7 @@
                     <td>Rp {{$order->tiket->price}}</td>
                     <td>{{$order->order_number}}</td>
                     <td>{{$order->tiket->location}}</td>
-                    <td>{{$order->tiket->event_time}}</td>
+                    <td>{{\Carbon\Carbon::parse($order->tiket->event_time)->format('M-l-Y')}}</td>
                     <td>{{$order->status}}</td>
 
                 @endforeach
