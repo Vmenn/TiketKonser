@@ -18,8 +18,9 @@
             <thead>
                 <tr>
                     <th>ID Konser</th>
+                    <th>Name</th>
                     <th>Order Number</th>
-                    <th>Full Name</th>
+                    <th>Price</th>
                     <th>No KTP</th>
                     <th>email</th>
                     <th>status</th>
@@ -47,6 +48,7 @@
         },
         columns: [
             { data: 'tiket_id', name: 'tiket_id' },
+            { data: 'last_name',name: 'last_name' },
             { data: 'order_number', name: 'order_number' },
             { data: 'first_name', name: 'first_name' },
             { data: 'no_ktp', name: 'no_ktp' },

@@ -13,7 +13,7 @@ class PesananController extends Controller
     public function pesanan()
     {
         if (request()->ajax()) {
-            $query = Order::where('status', 'valid')->get();
+            $query = Order::where('status', 'valid')->with(['Tiket'])->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -33,8 +33,19 @@ class PesananController extends Controller
                         $btn = '<span class="badge rounded-pill bg-danger">Sudah Check In</span>';
                     }
                     return $btn;
+                })->addColumn('first_name', function ($item) {
+                    $btn = $item->tiket->price;
+                    // var_dump($dd);
+                    // exit;
+                    $btn = '<span class="badge rounded-pill bg-success">Rp' . $item->tiket->price . '</span>';
+
+                    return $btn;
+                })->addColumn('last_name', function ($item) {
+                    $btn = '<td">' . $item->first_name . '' . $item->last_name . '</td>';
+
+                    return $btn;
                 })
-                ->rawColumns(['action', 'description',  'status',])
+                ->rawColumns(['action', 'description',  'status', 'first_name', 'last_name'])
                 ->make();
         }
 
