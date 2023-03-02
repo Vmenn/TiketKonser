@@ -293,61 +293,6 @@
         </div>
     </div>
 </main>
-{{-- <div class="page-header breadcrumb-wrap">
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="{{route('home')}}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
-
-        </div>
-    </div>
-</div>
-<div class="container mb-30">
-    <div class="row">
-        <div class="col-xl-10 col-lg-12 m-auto">
-            <div class="product-detail accordion-detail">
-                <div class="row mb-50 mt-30">
-                    <div class="col-md-6 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
-                        <div class="detail-gallery">
-                            <span class="zoom-icon"><i class="fi-rs-search"></i></span>
-                            <!-- MAIN SLIDES -->
-                            <div class="product-image-slider">
-                                    <figure class="border-radius-10">
-                                        <img src="{{ asset( 'Upload/tiket/'.$tiket->image) }} " alt="product image" />
-                                    </figure>
-
-                            </div>
-                        </div>
-                        <!-- End Gallery -->
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="detail-info pr-30 pl-30">
-                            <h2 class="title-detail" id="dpname"> {{ $tiket->name }} </h2>
-                            <div class="product-detail-rating">
-                            </div>
-                            <div class="clearfix product-price-cover">
-                                    <div class="product-price primary-color float-left">
-                                        <span class="current-price text-brand">${{ $tiket->price }}</span>
-                                    </div>
-                            </div>
-                            <div class="short-desc mb-30">
-                                <p class="font-lg"> {{ $tiket->desc }}</p>
-                            </div>
-
-                            <div class="">
-                                <div class="">
-                                    <input type="hidden" id="tiket_id" value="{{ $tiket->id }}">
-                                    <a href="{{route('tiket.detail',$tiket->id)}}" class="btn btn-success"></>Pesan Sekarang</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Detail Info -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 </body>
 </html>
